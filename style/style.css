@@ -14,34 +14,36 @@ body {
 #community {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   margin-top: 50px;
   margin-right: 30px;
   margin-left: 30px;
+  width: 100%;
+  height: 100%;
 }
 h1 {
-  margin-bottom: 50px;
   text-align: center;
   font-weight: 700;
   color: rgb(197, 40, 40);
+  width: 100%;
+  height: 100px;
 }
 .teachers {
-  margin-left: 90px;
+  height: 300px;
+  margin-left: 80px;
 }
 .teachers ul li {
   display: inline;
   margin-left: 40px;
 }
-.teachers ul li img {
+.teachers  img {
   width: 100px;
   height: 100px;
+  transition: all .35s linear;
 }
-.teachers ul li img:hover {
-  width: 102px;
-  height: 102px;
+.teachers img:hover {
   cursor: pointer;
-  box-shadow: 2px 2px rgb(197, 40, 40);
   border-radius: 100px;
+  transform: scale(1.2);
 }
 /*GABRIELLE*/
 #content {
@@ -60,15 +62,24 @@ h1 {
   padding-top: 100px;
   margin-top: 100px;
 }
+.about:hover{
+  transform: scale(1.2);
+  border-radius: 11px;
+  box-shadow: 0px 5px 33px #9747FF;
+  transition: all .35s linear;
+}
 .about img {
   width: 190px;
   height: 190px;
   margin-left: 45px;
   margin-bottom: 20px;
-}
-.img {
   position: absolute;
   top: -100px;
+  z-index: 1;
+}
+.about img:hover{
+  transform: scale(1.2)
+  transition: all .35s linear;
 }
 .about .name {
   font-weight: 900;
@@ -109,6 +120,12 @@ h1 {
   padding-right: 5px;
   margin-bottom: 20px;
 }
+.quote:hover{
+  transform: scale(1.2);
+  border-radius: 11px;
+  box-shadow: 0px 5px 33px #9747FF;
+  transition: all .35s linear;
+}
 .quote p {
   width: 190px;
   font-weight: 700;
@@ -140,6 +157,12 @@ h1 {
   padding-left: 20px;
   padding-top: 25px;
 }
+.demographics:hover{
+  transform: scale(1.2);
+  border-radius: 11px;
+  box-shadow: 0px 5px 33px #9747FF;
+  transition: all .35s linear;
+}
 .demographics .naming {
   font-weight: 900;
   font-size: 16px;
@@ -168,6 +191,12 @@ h1 {
   padding-top: 50px;
   margin-top: 50px;
   margin-bottom: 20px;
+}
+.traits:hover{
+  transform: scale(1.2);
+  border-radius: 11px;
+  box-shadow: 0px 5px 33px #9747FF;
+  transition: all .35s linear;
 }
 .traits .naming {
   font-weight: 900;
@@ -214,6 +243,12 @@ input[type="range"]::-webkit-slider-thumb {
   flex-direction: column;
   justify-content: space-evenly;
 }
+.tags:hover{
+  transform: scale(1.2);
+  border-radius: 11px;
+  box-shadow: 0px 5px 33px #9747FF;
+  transition: all .35s linear;
+}
 .tags p {
   width: 90px;
   height: 30px;
@@ -222,6 +257,10 @@ input[type="range"]::-webkit-slider-thumb {
   border-radius: 5px;
   padding: 5px;
   color: white;
+}
+.tags p:hover{
+  background: linear-gradient(94.67deg, #9747FF 0%, #6134C6 100%);
+  transition: all .35s linear;
 }
 .box-four {
   display: flex;
@@ -243,6 +282,12 @@ input[type="range"]::-webkit-slider-thumb {
   box-shadow: 30px 38px 0px -4px #ef9d90;
   border: 1px solid rgb(234, 232, 232);
 }
+.needs:hover{
+  transform: scale(1.2);
+  border-radius: 11px;
+  box-shadow: 0px 5px 33px #9747FF;
+  transition: all .35s linear;
+}
 .needs .naming {
   font-weight: 900;
   font-size: 16px;
@@ -255,11 +300,13 @@ input[type="range"]::-webkit-slider-thumb {
   text-align: center;
   margin-bottom: 10px;
 }
+/*DARK MODE*/
 .container h4 {
   color: #6134c6;
   text-align: start;
   margin-top: -20px;
 }
+
 .container .over {
   width: 100%;
   height: 100vh;
@@ -268,12 +315,12 @@ input[type="range"]::-webkit-slider-thumb {
   left: 0;
   z-index: -1;
   background-color: #fff;
-  transition: 0.2s;
+  transition: all .55s linear;
 }
 .container label {
-  transition: 0.2s;
   cursor: pointer;
 }
+
 .container input {
   display: none;
 }
